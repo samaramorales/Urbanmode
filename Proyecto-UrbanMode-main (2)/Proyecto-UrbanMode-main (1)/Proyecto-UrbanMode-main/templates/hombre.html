@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ropa de Hombre - UrbanMode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<style>
+  body { padding-top: 100px; }
+  #carrito {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 9999;
+    display: none;
+  }
+  #carrito ul { padding-left: 20px; }
+  #carrito-toggle {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 10000;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="../img/image-removebg-preview (1).png" alt="Logo" height="85">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="hombre.html" class="nav-link">Hombre</a></li>
+          <li><a href="mujer.html" class="nav-link">Mujer</a></li>
+          <li><a href="sale.html" class="nav-link">Sale</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link position-relative" id="carrito-icono">
+              🛒<span class="badge bg-danger rounded-pill" id="contador-carrito">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Sección Hombre -->
+  <div class="card-section fade-in">
+    <h2 class="text-center mb-4">Ropa para Hombre</h2>
+    <div class="container-1">
+
+      <div class="card" data-aos="fade-up">
+        <span class="descuento">-20%</span>
+        <img src="https://i.pinimg.com/736x/42/b7/ff/42b7ff443309ad2d117f84ffdf56816d.jpg" class="card-img-top" alt="Chaqueta blanca">
+        <div class="card-body">
+          <h5>Chaqueta blanca</h5>
+          <p>$45.000 - Tallas: S, M, L</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Chaqueta blanca', 45000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://i.pinimg.com/736x/24/c7/74/24c774c5ab0edc28658afd9eb151bd41.jpg" class="card-img-top" alt="Chaqueta azul">
+        <div class="card-body">
+          <h5>Chaqueta azul</h5>
+          <p>$70.000 - Tallas: 30, 32, 34</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Chaqueta azul', 70000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://i.pinimg.com/736x/d9/c8/da/d9c8da9194dbf9ff3c5149a5cddc9fc3.jpg" class="card-img-top" alt="Chaqueta de mezclilla">
+        <div class="card-body">
+          <h5>Chaqueta de mezclilla</h5>
+          <p>$95.000 - Tallas: M, L, XL</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Chaqueta de mezclilla', 95000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://i.pinimg.com/736x/1f/51/42/1f5142f68736c8d57b28c799baea0d8e.jpg" class="card-img-top" alt="Jean">
+        <div class="card-body">
+          <h5>Jean clásico</h5>
+          <p>$30.000 - Tallas: S, M, L, XL</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Jean clásico', 30000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://hmcolombia.vtexassets.com/arquivos/ids/3892420/Baggy-Cargo-Jeans---Azul-denim---HM-CO.jpg" class="card-img-top" alt="Bermudas">
+        <div class="card-body">
+          <h5>Bermudas casuales</h5>
+          <p>$40.000 - Tallas: M, L, XL</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Bermudas casuales', 40000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://hmcolombia.vtexassets.com/arquivos/ids/3939866-483-725?v=638606022376930000" class="card-img-top" alt="Jean negro">
+        <div class="card-body">
+          <h5>Jean negro</h5>
+          <p>$60.000 - Tallas: S, M, L</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Jean negro', 60000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://hmcolombia.vtexassets.com/arquivos/ids/4234116-483-725?v=638743678783200000" class="card-img-top" alt="Blazer">
+        <div class="card-body">
+          <h5>Blazer elegante</h5>
+          <p>$120.000 - Tallas: M, L</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Blazer elegante', 120000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://hmcolombia.vtexassets.com/arquivos/ids/3755852/Carpenter-Baggy-Jeans---Negro-denim---HM-CO.jpg" class="card-img-top" alt="Jogger">
+        <div class="card-body">
+          <h5>Jogger deportivo</h5>
+          <p>$55.000 - Tallas: S, M, L</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Jogger deportivo', 55000)">Comprar</button>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://hmchile.vtexassets.com/arquivos/ids/6085887/Loose-Jeans---Azul-denim-oscuro---HM-CL.jpg" class="card-img-top" alt="Gabardina">
+        <div class="card-body">
+          <h5>Gabardina beige</h5>
+          <p>$150.000 - Tallas: M, L, XL</p>
+          <button class="btn-comprar" onclick="agregarAlCarrito('Gabardina beige', 150000)">Comprar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="text-center p-3 mt-5">
+    <p>© 2025 UrbanMode - Hombre</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="../js/carrito.js"></script> <!-- Aquí enlazamos el script del carrito -->
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    fadeInElements.forEach(el => observer.observe(el));
+  </script>
+  <script src="../js/carrito.js"></script>
+</body>
+</html>
